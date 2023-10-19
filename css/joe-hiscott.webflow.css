@@ -1,0 +1,882 @@
+:root {
+  --white-smoke: #eaeaea;
+  --grey: #8a8a8a;
+  --black: #141414;
+  --dark-slate-grey: #3d3d3d;
+  --dark-grey: #a6a6a6;
+}
+
+body {
+  color: var(--white-smoke);
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+a {
+  color: var(--white-smoke);
+  text-decoration: none;
+}
+
+.page-w {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: relative;
+}
+
+.page-w.page-home {
+  background-image: url('../images/jh-home.webp');
+  background-position: 0 0;
+  background-size: cover;
+  padding-top: 7rem;
+}
+
+.page-w.page-cfq {
+  background-image: url('../images/cfq-bg.webp');
+  background-position: 50%;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+}
+
+.page-w.page-clinic {
+  background-image: url('../images/clinic-bg.webp');
+  background-position: 50%;
+  background-size: cover;
+  align-items: flex-start;
+  display: flex;
+}
+
+.page-w.page-cabin {
+  background-image: url('../images/cabin-desktop.webp');
+  background-position: 50%;
+  background-size: cover;
+  align-items: flex-start;
+  display: flex;
+}
+
+.page-w.page-contact {
+  background-image: url('../images/contact.jpg');
+  background-position: 50%;
+  background-size: cover;
+  align-items: flex-start;
+  display: flex;
+}
+
+.nav {
+  z-index: 4;
+  justify-content: space-between;
+  padding-top: .75rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  display: flex;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+}
+
+.nav-link {
+  border: .5px solid var(--grey);
+  background-color: var(--black);
+  border-radius: .125rem;
+  padding: .25rem .5rem;
+  display: flex;
+}
+
+.nav-link:hover {
+  background-color: #000;
+}
+
+.nav-link.link-m {
+  display: none;
+}
+
+.t-sm {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.nav_link-w {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  display: flex;
+}
+
+.home-component {
+  max-width: 80rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+}
+
+.home_column {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.h-lg {
+  font-size: 1.5rem;
+  line-height: 1.16;
+}
+
+.home_card {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  border: 1px solid var(--dark-slate-grey);
+  background-color: var(--black);
+  border-radius: .25rem;
+  flex-direction: column;
+  padding: 1rem;
+  display: flex;
+}
+
+.home_h-w {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.h_m {
+  font-size: 1.375rem;
+  line-height: 1.2;
+}
+
+.home_tag {
+  background-color: #000;
+  border-radius: .25rem;
+  padding: .25rem;
+  display: flex;
+}
+
+.t-tag {
+  text-transform: uppercase;
+  font-size: .75rem;
+  line-height: 1;
+}
+
+.home_tag-w {
+  display: flex;
+}
+
+.home_card-line {
+  width: 100%;
+  height: 1px;
+  background-color: #3d3d3d;
+}
+
+.t-md {
+  margin-bottom: 0;
+}
+
+.t-md.t-grey {
+  color: var(--dark-grey);
+}
+
+.t-link {
+  text-decoration: underline;
+}
+
+.t-link.t-grey {
+  color: var(--grey);
+}
+
+.t-link.t-grey:hover, .t-white {
+  color: var(--white-smoke);
+}
+
+.home_t-w {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.cfq-component {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: relative;
+  overflow: scroll;
+}
+
+.cfq_column {
+  overflow: auto;
+}
+
+.cfq_card {
+  max-height: 80vh;
+  max-width: 62rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  border: 1px solid var(--dark-slate-grey);
+  background-color: var(--black);
+  border-radius: .25rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  display: flex;
+  position: relative;
+  overflow: scroll;
+}
+
+.body_h-w {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.body_card-line {
+  width: 100%;
+  height: 1px;
+  background-color: #3d3d3d;
+}
+
+.body_t-w {
+  flex-direction: column;
+  display: flex;
+}
+
+.t-lg {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
+.t-lg.t-grey {
+  color: var(--dark-grey);
+}
+
+.cfq_bg-mobile {
+  display: none;
+}
+
+.clinic_card {
+  max-height: 80vh;
+  max-width: 61.25rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  border: 1px solid var(--dark-slate-grey);
+  background-color: var(--black);
+  border-radius: .25rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  display: flex;
+  position: relative;
+  overflow: auto;
+}
+
+.clinic-component {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: relative;
+  overflow: auto;
+}
+
+.clinic_bg-mobile, .clinic-gradient, .cfq-gradient {
+  display: none;
+}
+
+.cabin_card {
+  max-height: 80vh;
+  max-width: 61.25rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  border: 1px solid var(--dark-slate-grey);
+  background-color: var(--black);
+  border-radius: .25rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  display: flex;
+  position: relative;
+  overflow: auto;
+}
+
+.cabin-gradient {
+  display: none;
+}
+
+.cabin-component {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: relative;
+  overflow: auto;
+}
+
+.cabin_card-w {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  display: flex;
+}
+
+.img-cabin {
+  width: 30.375rem;
+  height: 30.375rem;
+  border-radius: .25rem;
+}
+
+.cabin_bg-mobile {
+  display: none;
+}
+
+.contact-component {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: relative;
+  overflow: auto;
+}
+
+.contact_card {
+  max-height: 80vh;
+  max-width: 61.25rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  border: 1px solid var(--dark-slate-grey);
+  background-color: var(--black);
+  border-radius: .25rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  display: flex;
+  position: relative;
+  overflow: auto;
+}
+
+.img-joe {
+  width: 10rem;
+  height: 13.125rem;
+  border-radius: .25rem;
+}
+
+.contact_card-w {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  display: flex;
+}
+
+.contact_bg-mobile {
+  display: none;
+}
+
+.research-link, .research-link.t-underscore {
+  text-decoration: underline;
+}
+
+.t-link-home.t-grey {
+  color: var(--grey);
+}
+
+.t-link-home.t-grey:hover {
+  color: var(--white-smoke);
+}
+
+.home_bg-mobile, .home-gradient {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    background-color: #000;
+  }
+
+  .page-w.page-home {
+    background-image: none;
+    background-position: 0 0;
+    background-size: auto;
+  }
+
+  .page-w.page-cfq, .page-w.page-clinic, .page-w.page-cabin, .page-w.page-contact {
+    height: auto;
+    background-image: none;
+    background-position: 0 0;
+    background-size: auto;
+  }
+
+  .nav {
+    z-index: 99;
+  }
+
+  .home-component {
+    z-index: 2;
+    max-width: 50rem;
+    grid-template-columns: 1fr;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    position: relative;
+  }
+
+  .cfq-component {
+    grid-template-columns: 1fr;
+    padding: 16rem 4rem 4rem;
+  }
+
+  .cfq_card {
+    z-index: 6;
+    max-height: none;
+    max-width: none;
+  }
+
+  .cfq_bg-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .cfq_bg-mobile_w {
+    width: 100%;
+    height: 32rem;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .clinic_card {
+    z-index: 6;
+    max-height: none;
+    max-width: none;
+  }
+
+  .clinic-component {
+    grid-template-columns: 1fr;
+    padding: 16rem 4rem 4rem;
+  }
+
+  .clinic_bg-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .clinic_bg-mobile_w {
+    width: 100%;
+    height: 32rem;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .cfq-gradient {
+    display: block;
+  }
+
+  .cabin_card {
+    z-index: 6;
+    max-height: none;
+    max-width: none;
+  }
+
+  .cabin_bg-mobile_w {
+    width: 100%;
+    height: 32rem;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .cabin-component {
+    grid-template-columns: 1fr;
+    padding: 16rem 4rem 4rem;
+  }
+
+  .img-cabin {
+    display: none;
+  }
+
+  .cabin_bg-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .contact-component {
+    grid-template-columns: 1fr;
+    padding: 16rem 4rem 4rem;
+  }
+
+  .contact_bg-mobile_w {
+    width: 100%;
+    height: 32rem;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .contact_card {
+    z-index: 6;
+    max-height: none;
+    max-width: none;
+  }
+
+  .img-joe {
+    width: 17.5rem;
+    height: 22.75rem;
+  }
+
+  .contact_card-w {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .contact_bg-mobile, .home_bg-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .home_bg-mobile_w {
+    width: 100%;
+    height: 32rem;
+    position: absolute;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .home-gradient {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-component, .cfq-component {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .cfq_bg-mobile_w {
+    height: 24rem;
+  }
+
+  .clinic-component {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .clinic_bg-mobile_w {
+    height: 24rem;
+  }
+
+  .clinic-gradient {
+    height: 12rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+    padding-bottom: 0;
+    padding-right: 0;
+    display: block;
+    position: absolute;
+    top: 13rem;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .cfq-gradient {
+    height: 12rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+    padding-bottom: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 13rem;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .cabin-gradient {
+    height: 13rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+    padding-bottom: 0;
+    padding-right: 0;
+    display: block;
+    position: absolute;
+    top: 13rem;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .cabin_bg-mobile_w {
+    height: 26rem;
+  }
+
+  .cabin-component, .contact-component {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .contact_bg-mobile_w {
+    height: 26rem;
+  }
+
+  .home_bg-mobile_w {
+    height: 47rem;
+  }
+
+  .home-gradient {
+    height: 12rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+    padding-bottom: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 37rem;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .page-w.page-home {
+    width: 100%;
+    height: 100%;
+    padding-top: 10rem;
+  }
+
+  .page-w.page-cfq, .page-w.page-clinic, .page-w.page-cabin, .page-w.page-contact {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav-link.link-m {
+    display: flex;
+  }
+
+  .nav-link.link-d {
+    display: none;
+  }
+
+  .t-sm {
+    font-size: .75rem;
+  }
+
+  .nav_link-w {
+    grid-column-gap: .25rem;
+    grid-row-gap: .25rem;
+  }
+
+  .home-component {
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .h-lg {
+    font-size: 1.25rem;
+  }
+
+  .home_card {
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+    padding: .75rem;
+  }
+
+  .h_m {
+    font-size: 1.25rem;
+  }
+
+  .cfq-component {
+    padding: 10rem 1rem 1rem;
+  }
+
+  .cfq_card {
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+    padding: .75rem;
+  }
+
+  .t-lg, .t-lg.t-grey {
+    font-size: 1rem;
+  }
+
+  .cfq_bg-mobile_w {
+    height: 14rem;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .clinic_card {
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+    padding: .75rem;
+  }
+
+  .clinic-component {
+    padding: 10rem 1rem 1rem;
+  }
+
+  .clinic_bg-mobile_w {
+    height: 12rem;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .clinic-gradient {
+    width: 100%;
+    height: 6rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+    padding-bottom: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 7.3rem;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .cfq-gradient {
+    width: 100%;
+    height: 7.6rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+    padding-bottom: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 7.3rem;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .cabin_card {
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+    padding: .75rem;
+  }
+
+  .cabin-gradient {
+    width: 100%;
+    height: 8rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+    padding-bottom: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 9.5rem;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .cabin_bg-mobile_w {
+    height: 16rem;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .cabin-component, .contact-component {
+    padding: 10rem 1rem 1rem;
+  }
+
+  .contact_bg-mobile_w {
+    height: 16rem;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .contact_card {
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+    padding: .75rem;
+  }
+
+  .img-joe {
+    width: 10.5rem;
+    height: 13.65rem;
+  }
+
+  .home_bg-mobile_w {
+    height: 23.75rem;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .home-gradient {
+    width: 100%;
+    height: 7.6rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+    padding-bottom: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 17rem;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+}
+
+
