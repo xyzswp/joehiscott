@@ -286,7 +286,7 @@ a {
 
 .clinic_card {
   max-height: 80vh;
-  max-width: 61.25rem;
+  max-width: 63rem;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   border: 1px solid var(--dark-slate-grey);
